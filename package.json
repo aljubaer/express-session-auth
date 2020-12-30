@@ -1,0 +1,16 @@
+{
+    "name": "node-auth",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "up": "mkdir -p data && sudo docker-compose up -d",
+        "postup": "npm run dev",
+        "stop": "sudo docker-compose stop",
+        "down": "sudo docker-compose down",
+        "dev": "npm run dev --prefix api"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
