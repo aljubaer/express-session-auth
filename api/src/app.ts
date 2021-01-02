@@ -2,6 +2,7 @@ import session, { Store } from "express-session";
 import express from "express";
 import { SESSION_OPTIONS } from "./config";
 import { Register } from "./routes";
+import { notFound, serverError } from "./middleware";
 
 export const createApp = (store: Store) => {
 
@@ -21,6 +22,10 @@ export const createApp = (store: Store) => {
     });
 
     app.use(Register);
+
+    app.use(notFound);
+
+    app.use(serverError);
     
     return app;
 

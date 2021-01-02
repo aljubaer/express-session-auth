@@ -4,10 +4,10 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "up": "mkdir -p data && sudo docker-compose up -d",
+        "up": "mkdir -p data && docker-compose up -d",
         "postup": "npm run dev",
-        "stop": "sudo docker-compose stop",
-        "down": "sudo docker-compose down",
+        "stop": "docker-compose stop",
+        "down": "docker-compose down",
         "dev": "npm run dev --prefix api"
     },
     "keywords": [],

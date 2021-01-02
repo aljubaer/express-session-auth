@@ -5,7 +5,7 @@ import {
 
 const id = Joi.objectId().required()
 
-const email = Joi.string().email().min(8).max(254).lowercase().trim().required()
+const email = Joi.string().email().lowercase().trim().required()
 
 const name = Joi.string().min(3).max(128).trim().required()
 
